@@ -1,0 +1,35 @@
+<%= form_for @track do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :bpm %><br>
+    <%= f.number_field :bpm %>
+  </p>
+
+  <p>
+    <%= f.label "Image URL" %><br>
+    <%= f.text_field :thumb_img %>
+  </p>
+
+  <p>
+    <%= f.label :audio_url %><br>
+    <%= f.text_field :audio_url %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
