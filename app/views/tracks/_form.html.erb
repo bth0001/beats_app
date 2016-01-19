@@ -1,12 +1,12 @@
 <%= form_for @track do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :required => true %>
   </p>
 
   <p>
     <%= f.label :bpm %><br>
-    <%= f.number_field :bpm %>
+    <%= f.number_field :bpm, :required => true %>
   </p>
 
   <p>
@@ -16,12 +16,12 @@
 
   <p>
     <%= f.label :audio_url %><br>
-    <%= f.text_field :audio_url %>
+    <%= f.text_field :audio_url, :required => true %>
   </p>
 
   <p>
     <%= f.label :price %><br>
-    <%= f.number_field :price %>
+    <%= f.number_field :price, :required => true %>
   </p>
 
   <p>
