@@ -1,4 +1,4 @@
-class TracksController < ActionController::Base
+class TracksController < ApplicationController
   # before_action :set_track, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -16,6 +16,7 @@ class TracksController < ActionController::Base
   end
 
   def show
+    puts '**** WE ARE AT SHOW ****'
     @track = Track.find(params[:id])
   end
 
@@ -30,8 +31,9 @@ class TracksController < ActionController::Base
   end
 
   def destroy
-    @track = Track.find(params[:id])
-    @track.destroy
+    puts '**** WE ARE AT DESTROY ****'
+    track = Track.find(params[:id])
+    track.destroy
     redirect_to tracks_path
   end
 end

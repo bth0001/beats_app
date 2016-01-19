@@ -1,35 +1,38 @@
-<%= form_for @track do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :required => true %>
-  </p>
+    <%= form_for @track do |f| %>
+        <div class="form-group">
+          <%= f.label :title %><br>
+          <%= f.text_field :title, :required => true %>
+        </div>
 
-  <p>
-    <%= f.label :bpm %><br>
-    <%= f.number_field :bpm, :required => true %>
-  </p>
+        <div class="form-group">
+          <%= f.label :bpm %><br>
+          <%= f.number_field :bpm, :required => true %>
+        </div>
 
-  <p>
-    <%= f.label "Image URL" %><br>
-    <%= f.text_field :thumb_img %>
-  </p>
+        <div class="form-group">
+          <%= f.label "Image URL" %><br>
+          <%= f.text_field :thumb_img %>
+        </div>
 
-  <p>
-    <%= f.label :audio_url %><br>
-    <%= f.text_field :audio_url, :required => true %>
-  </p>
+        <div class="form-group">
+          <%= f.label :audio_url %><br>
+          <%= f.text_field :audio_url, :required => true %>
+        </div>
 
-  <p>
-    <%= f.label :price %><br>
-    <%= f.number_field :price, :required => true %>
-  </p>
+        <div class="form-group">
+          <%= f.label :price %><br>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <%= f.number_field :price, class: 'form-control', :required => true %>
+          </div>
+        </div>
 
-  <p>
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </p>
+        <div class="form-group">
+          <%= f.label :user_id %><br>
+          <%= f.number_field :user_id %>
+        </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+        <div class="form-group">
+          <%= f.submit class: 'btn btn-primary'%>
+        </div>
+      <% end %>
