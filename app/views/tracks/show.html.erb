@@ -1,8 +1,14 @@
-<h1>Track Detail</h1>
-<h2> <%= @track.title %></h2>
-<p>Produced By:</p>
-<p>BPM: <%= @track.bpm %></p>
-<p>Length: <%= @track.time %></p>
-<p>Price: $<%= @track.price %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Track Detail</h1>
+      <h3> <%= @track.title %></h3>
+      <p>Produced By:</p>
+      <p>BPM: <%= @track.bpm %></p>
+      <p>Length: <%= @track.time %></p>
+      <p>Price: $<%= @track.price %></p>
 
-<%= link_to 'Back', :tracks %>
+      <%= link_to 'Back', :tracks, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

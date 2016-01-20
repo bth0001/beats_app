@@ -1,22 +1,29 @@
-    <%= form_for @track do |f| %>
+<div class="row">
+  <div class="col-md-6">
+  <%= form_for @track do |f| %>
         <div class="form-group">
           <%= f.label :title %><br>
-          <%= f.text_field :title, :required => true %>
+          <%= f.text_field :title, class: 'form-control', :required => true %>
         </div>
 
         <div class="form-group">
-          <%= f.label :bpm %><br>
-          <%= f.number_field :bpm, :required => true %>
+          <%= f.label :time, "Length" %><br>
+          <%= f.number_field :time, class: 'form-control', :required => true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :bpm, "BPM" %><br>
+          <%= f.number_field :bpm, class: 'form-control', :required => true %>
         </div>
 
         <div class="form-group">
           <%= f.label "Image URL" %><br>
-          <%= f.text_field :thumb_img %>
+          <%= f.text_field :thumb_img, class: 'form-control' %>
         </div>
 
         <div class="form-group">
           <%= f.label :audio_url %><br>
-          <%= f.text_field :audio_url, :required => true %>
+          <%= f.text_field :audio_url, class: 'form-control', :required => true %>
         </div>
 
         <div class="form-group">
@@ -36,3 +43,5 @@
           <%= f.submit class: 'btn btn-primary'%>
         </div>
       <% end %>
+  </div>
+</div>

@@ -22,9 +22,9 @@
             <td><%= track.title %></td>
             <td><%= track.bpm %></td>
             <td>$<%= track.price %></td>
-            <td><%= link_to 'Show', track %></td>
-            <td><%= link_to 'Edit', edit_track_path(track) %></td>
-            <td><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to '<i class="fa fa-eye"></i>'.html_safe, track %></td>
+            <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_track_path(track) %></td>
+            <td><%= link_to '<i class="fa fa-trash"></i>'.html_safe, track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
 
           <% end %>
