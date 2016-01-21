@@ -1,0 +1,29 @@
+var ready;
+ready = function () {
+  $('.pause-button').hide();
+
+  $('.play-button').on('click', function() {
+    var audioId = $(this).prev().attr('id');
+    $(this).hide().next().show();
+    console.log("line 24");
+    var audio = document.getElementById(audioId);
+    audio.play();
+  })
+
+  $('.pause-button').click(function() {
+    var audioId = $(this).prev().prev().attr('id');
+    $(this).hide().prev().show();
+    var audio = document.getElementById(audioId);
+    audio.pause();
+  })
+
+  $('.restart-button').click(function() {
+    var audioId = $(this).prev().prev().prev().attr('id');
+    var audio = document.getElementById(audioId);
+    audio.currentTime = 0;
+  })
+};
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
+

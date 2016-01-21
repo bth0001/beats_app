@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120002746) do
+ActiveRecord::Schema.define(version: 20160121164312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "tracks", force: :cascade do |t|
     t.string   "title"
-    t.decimal  "bpm"
+    t.integer  "bpm"
     t.string   "thumb_img"
     t.string   "audio_url"
-    t.decimal  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "time"
-    t.integer  "user_id",    null: false
+    t.float    "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "producer_id", null: false
+    t.integer  "time"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160120002746) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type",                   default: "", null: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -4,27 +4,47 @@
     <div class="col-md-12">
       <h1>Tracks</h1>
 
-      <table class="table table-striped">
+      <table id="tracks" class="table table-striped">
         <thead>
-          <th>Image</th>
+          <th></th>
+          <th></th>
+          <th>Producer</th>
           <th>Title</th>
+          <th>Length</th>
           <th>BPM</th>
           <th>Price</th>
-          <th>Show</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th class="small-cell">Details</th>
+          <th class="small-cell">Edit</th>
+          <th class="small-cell">Delete</th>
         </thead>
 
         <tbody>
           <% @tracks.each do |track| %>
           <tr>
-            <td><img src=" <%= track.thumb_img %> " alt=""></td>
+            <td>
+              <audio id=" <%= track.title %> " class="audio-file" src="<%= track.audio_url %>" preload="none"></audio>
+              <button class="play-button">
+                <i class="glyphicon glyphicon-play"></i>
+              </button>
+              <button class="pause-button">
+                <i class="glyphicon glyphicon-pause"></i>
+              </button>
+              <button class="restart-button">
+                <i class="fa fa-rotate-left"></i>
+              </button>
+            </td>
+            <td><img src=" <%= track.thumb_img %> " alt="" class="thumb-img"></td>
+            <td><%= track.producer.name %></td>
             <td><%= track.title %></td>
+            <td><%= track.formatted_time %></td>
             <td><%= track.bpm %></td>
-            <td>$<%= track.price %></td>
-            <td><%= link_to '<i class="fa fa-eye"></i>'.html_safe, track %></td>
-            <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_track_path(track) %></td>
-            <td><%= link_to '<i class="fa fa-trash"></i>'.html_safe, track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= number_to_currency(track.price) %></td>
+            <td class="small-cell"><%= link_to '<i class="fa fa-eye"></i>'.html_safe, track %></td>
+            <% if track.producer == current_user %>
+            <td class="small-cell"><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_track_path(track) %></td>
+
+            <td class="small-cell"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           </tr>
 
           <% end %>

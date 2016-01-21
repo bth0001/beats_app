@@ -2,11 +2,12 @@
   <div class="row">
     <div class="col-md-12">
       <h1>Track Detail</h1>
-      <h3> <%= @track.title %></h3>
-      <p>Produced By:</p>
+      <h3> <%= @track.title %></h3><p>Produced By: <%= @track.producer.name %></p>
+      <img src=" <%= @track.thumb_img %> " alt="" class="detail-track-img">
+      <audio src="<%= @track.audio_url %>" controls class="audio-controls"></audio>
       <p>BPM: <%= @track.bpm %></p>
       <p>Length: <%= @track.time %></p>
-      <p>Price: $<%= @track.price %></p>
+      <p>Price: $<%= number_with_precision(@track.price, :precision => 2) %></p>
 
       <%= link_to 'Back', :tracks, class: 'btn btn-primary' %>
     </div>

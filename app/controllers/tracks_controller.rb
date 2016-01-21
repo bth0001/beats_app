@@ -10,13 +10,14 @@ class TracksController < ApplicationController
   end
 
   def create
-    track = params.require(:track).permit(:title, :bpm, :thumb_img, :audio_url, :price, :time, :user_id)
-    Track.create(track)
+    track_params = params.require(:track).permit(:title, :bpm, :thumb_img, :audio_url, :price, :time)
+    @track = Track.new(track_params)
+    @track.user = current_user
+    @track.save
     redirect_to tracks_path
   end
 
   def show
-    puts '**** WE ARE AT SHOW ****'
     @track = Track.find(params[:id])
   end
 
@@ -26,14 +27,17 @@ class TracksController < ApplicationController
 
   def update
     @track = Track.find(params[:id])
-    @track.update_attributes(params.require(:track).permit(:title, :bpm, :thumb_img, :audio_url, :price, :time, :user_id))
+    @track.update_attributes(params.require(:track).permit(:title, :bpm, :thumb_img, :audio_url, :price, :time))
     redirect_to tracks_path
   end
 
   def destroy
-    puts '**** WE ARE AT DESTROY ****'
     track = Track.find(params[:id])
     track.destroy
     redirect_to tracks_path
+  end
+
+  def mytracks
+    @mytracks = Track.find(current_user)
   end
 end

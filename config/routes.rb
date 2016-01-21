@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/tracks/:id/edit', to: 'tracks#edit', as: :edit_track
   patch '/tracks/:id', to: 'tracks#update'
   delete '/tracks/:id', to: 'tracks#destroy'
-
+  get '/tracks', to: 'tracks#mytracks', as: :my_tracks
 
 
   # Example of regular route:

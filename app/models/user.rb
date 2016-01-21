@@ -4,3 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :lockable
 end
+
+class Producer < User
+  has_many :tracks, dependent: :destroy
+end
+
+class Rapper < User
+end
