@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Track Detail</h1>
-      <h3> <%= @track.title %></h3><p>Produced By: <%= @track.producer.name %></p>
+      <h2> <%= @track.title %> </h2>
+      <h4><span class="producer-name">Produced By: <%= link_to @track.producer.name, producer_tracks_path(@track.producer) %></span></h4>
       <img src=" <%= @track.thumb_img %> " alt="" class="detail-track-img">
       <audio src="<%= @track.audio_url %>" controls class="audio-controls"></audio>
       <p>BPM: <%= @track.bpm %></p>
-      <p>Length: <%= @track.time %></p>
-      <p>Price: $<%= number_with_precision(@track.price, :precision => 2) %></p>
+      <p>Length: <%= @track.formatted_time %></p>
+      <p>Price: <%= number_to_currency(@track.price) %> </p>
 
       <%= link_to 'Back', :tracks, class: 'btn btn-primary' %>
     </div>

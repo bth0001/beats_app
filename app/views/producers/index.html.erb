@@ -1,18 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Tracks</h1>
+      <h1><%= @tracks.first.producer.name %></h1>
 
       <table id="tracks" class="table table-striped">
         <thead>
           <th></th>
           <th></th>
-          <th>Producer</th>
           <th>Title</th>
           <th>Length</th>
           <th>BPM</th>
           <th>Price</th>
           <th class="small-cell">Details</th>
+          <% if @tracks.first.producer == current_user %>
+          <th class="small-cell">Edit</th>
+          <th class="small-cell">Delete</th>
+          <% end %>
         </thead>
 
         <tbody>
@@ -31,17 +34,25 @@
               </button>
             </td>
             <td><img src=" <%= track.thumb_img %> " alt="" class="thumb-img"></td>
-            <td><%= link_to track.producer.name, producer_tracks_path(track.producer) %></td>
             <td><%= track.title %></td>
             <td><%= track.formatted_time %></td>
             <td><%= track.bpm %></td>
             <td><%= number_to_currency(track.price) %></td>
             <td class="small-cell"><%= link_to '<i class="fa fa-eye"></i>'.html_safe, track %></td>
+            <% if track.producer == current_user %>
+            <td class="small-cell"><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_track_path(track) %></td>
+            <td class="small-cell"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           </tr>
 
           <% end %>
         </tbody>
+
+
       </table>
+      <% if @tracks.first.producer == current_user %>
+        <a href="/tracks/new" class="btn btn-primary">Add Track</a>
+      <% end %>
     </div>
   </div>
 </div>

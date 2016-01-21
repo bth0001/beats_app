@@ -29,7 +29,7 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 <% if current_user.type == "Producer" %>
-                <li><%= link_to 'Manage Tracks', my_tracks_path %></li>
+                <li><%= link_to 'Manage Tracks', producer_tracks_path(current_user.id) %></li>
                 <% end %>
                 <li><%= link_to 'Profile', edit_user_registration_path %></li>
                 <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>

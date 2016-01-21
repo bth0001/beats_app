@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  get 'producers/index'
+
   root to: 'static_pages#home'
 
   get 'static_pages/about', to: 'static_pages#about'
@@ -16,7 +18,11 @@ Rails.application.routes.draw do
   get '/tracks/:id/edit', to: 'tracks#edit', as: :edit_track
   patch '/tracks/:id', to: 'tracks#update'
   delete '/tracks/:id', to: 'tracks#destroy'
-  get '/tracks', to: 'tracks#mytracks', as: :my_tracks
+
+  get '/producers/:id/tracks', to: 'producers#index', as: :producer_tracks
+
+  devise_for :users
+
 
 
   # Example of regular route:

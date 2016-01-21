@@ -1,5 +1,8 @@
 class TracksController < ApplicationController
   # before_action :set_track, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :validate_user, only: [:edit, :update, :destroy]
+
 
   def index
     @tracks = Track.all
@@ -40,4 +43,12 @@ class TracksController < ApplicationController
   def mytracks
     @mytracks = Track.find(current_user)
   end
+
+  private
+
+  def validate_user
+    track = Track.find(params[:id])
+    redirect_to root_url, notice: 'Access Denied!' unless current_user == track.producer
+  end
+
 end
