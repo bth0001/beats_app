@@ -41652,3 +41652,1606 @@ Processing by TracksController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
   Rendered tracks/index.html.erb within layouts/application (8.9ms)
 Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/producers/11/tracks" for ::1 at 2016-01-21 17:27:09 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 11]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 11]]
+  Rendered producers/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 226ms (Views: 200.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 17:27:17 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 17:31:02 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 126ms (Views: 121.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 17:31:03 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 17:31:04 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 17:31:04 -0500
+
+
+Started GET "/producers/12/tracks" for ::1 at 2016-01-21 17:31:39 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 12]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  [["producer_id", 12]]
+  Rendered producers/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/producers/12/tracks" for ::1 at 2016-01-21 17:32:03 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 12]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 12]]
+  Rendered producers/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 17:32:04 -0500
+
+
+Started GET "/producers/12/tracks" for ::1 at 2016-01-21 17:37:03 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 12]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  [["producer_id", 12]]
+  Rendered producers/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 127ms (Views: 123.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 17:37:04 -0500
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 17:50:42 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 282ms (Views: 257.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:06 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 27ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:05:06 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.7ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 253ms (Views: 248.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:09 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:05:09 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.3ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 122ms (Views: 118.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:10 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:05:10 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 126ms (Views: 122.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:11 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:05:11 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.3ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 119ms (Views: 116.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:12 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:05:12 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 148ms (Views: 144.2ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-21 18:05:15 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lpHaw1AvIvRjAeWPLCY6xbO//pjBtVrQiFknmgslnHoCINBjOj3oDLdXUVetpq+bC4avCod5epNtq5MlroP71A=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:05:15 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-21 18:06:31 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 128ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-21 18:06:42 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HTndJOrwywA0VoaZRdoqTAuY+E8l8v1TRFbg7MCVE6pM/sTRfRR18vhPZu8GVG0mAnB9WYCDlmK8Mzl0LtKUzg==", "user"=>{"email"=>"dreamlifebeats@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "dreamlifebeats@gmail.com"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2016-01-21 23:06:42.373198"], ["current_sign_in_at", "2016-01-21 23:06:42.373198"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2016-01-21 23:06:42.374171"], ["id", 12]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:06:42 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:06:42 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 116ms (Views: 113.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/producers/12/tracks" for ::1 at 2016-01-21 18:06:46 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 12]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 12]]
+  Rendered producers/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:06:51 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/producers/11/tracks" for ::1 at 2016-01-21 18:06:53 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 11]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 11]]
+  Rendered producers/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 78ms (Views: 73.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/producers/11/tracks" for ::1 at 2016-01-21 18:07:13 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  [["producer_id", 11]]
+  Rendered producers/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 77ms (Views: 73.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 18:07:13 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 18:07:14 -0500
+
+
+Started GET "/tracks/49" for ::1 at 2016-01-21 18:07:26 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (1.0ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mProducer Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 99ms (Views: 91.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/producers/11/tracks" for ::1 at 2016-01-21 18:07:34 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  [["producer_id", 11]]
+  Rendered producers/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 259ms (Views: 255.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tracks/49" for ::1 at 2016-01-21 18:07:38 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:49:59 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.6ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 224ms (Views: 199.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:50:11 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 18:50:11 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 132ms (Views: 129.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-21 18:50:14 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6dizRbp/xI9IBZsBNkDV9e8ksWPIDGw+yn9nmM/6dG/WXz+N5aO6rRySBbCkekNPMIwZKmGljMH4jaBrAIqkmQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 18:50:14 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-21 21:11:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (69.2ms)
+Completed 200 OK in 250ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-21 21:11:58 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u2TBd3VGTkZ9UY2zdIRb4bt7bUqHvDCXSVZFsdjeZBvp+Lm+oTwHeoILtsRQgrPrKFpMCU0/oZByRABoVVNDHg==", "user"=>{"email"=>"kontrabandz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kontrabandz@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["current_sign_in_at", "2016-01-22 02:11:58.794251"], ["sign_in_count", 2], ["updated_at", "2016-01-22 02:11:58.797318"], ["id", 11]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 21:11:58 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:11:58 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 95ms (Views: 88.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:12:43 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 127ms (Views: 124.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:12:43 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:12:44 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 21:12:44 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 21:12:44 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 21:12:44 -0500
+
+
+Started GET "/tracks/49" for ::1 at 2016-01-21 21:14:48 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 291ms (Views: 273.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tracks/50" for ::1 at 2016-01-21 21:16:19 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 142ms (Views: 138.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:17:27 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 205ms (Views: 201.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/51" for ::1 at 2016-01-21 21:17:31 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 51]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:18:26 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.6ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 118ms (Views: 114.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tracks/52" for ::1 at 2016-01-21 21:18:28 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 52]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered tracks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:18:55 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tracks/53" for ::1 at 2016-01-21 21:18:58 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 53]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:19:28 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/54" for ::1 at 2016-01-21 21:19:32 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 54]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:19:46 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.6ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/55" for ::1 at 2016-01-21 21:19:51 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 55]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks/55" for ::1 at 2016-01-21 21:20:10 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.3ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 55]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 21:20:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tracks'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/tracks/55" for ::1 at 2016-01-21 21:20:38 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 55]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 147ms (Views: 103.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:39 -0500
+
+
+Started GET "/tracks/55" for ::1 at 2016-01-21 21:20:41 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.3ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 55]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 21:20:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:42 -0500
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:20:44 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mTrack Load (0.7ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProducer Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 21:20:44 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 21:20:44 -0500
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:20:47 -0500
+Processing by TracksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mTrack Load (0.4ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered tracks/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/producers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/application.self-ff0916dc5f8c5a055581131de49dff74f2e7777e518cba42efc41736302e5115.css?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/custom.self-c7f0bc92775c31f73814be5af618dfc76c21b43dc45c29890b63ec1ee05535f6.css?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/music.self-06641cc65f4db7e2a96efb413c8aa5a27493270c72a44a4546902c22ef231507.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/producers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-21 21:20:47 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-01-21 21:20:48 -0500
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for ::1 at 2016-01-21 21:20:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTrack Load (0.6ms)[0m  SELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  [["producer_id", 12]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 53]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tracks" WHERE "tracks"."id" = $1  [["id", 54]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 55]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1  [["id", 12]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTrack Load (0.4ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 11]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "tracks" WHERE "tracks"."id" = $1  [["id", 49]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 50]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tracks" WHERE "tracks"."id" = $1  [["id", 51]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 52]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1  [["id", 11]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kontrabandz@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "users" ("type", "name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["type", "Producer"], ["name", "Kontrabandz"], ["email", "kontrabandz@gmail.com"], ["encrypted_password", "$2a$10$mRuB8UWLqX/U2QmaO9sppeFTLHeN9u95g5KoWls6a7XUH7Kaw2WLu"], ["created_at", "2016-01-22 02:20:59.117522"], ["updated_at", "2016-01-22 02:20:59.117522"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dreamlifebeats@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("type", "name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["type", "Producer"], ["name", "Dream Life Beats"], ["email", "dreamlifebeats@gmail.com"], ["encrypted_password", "$2a$10$RDkVGHOqDBGoB1r8FFRQven9Kdg49jstqQFuWPiM4VThWI8NlDunS"], ["created_at", "2016-01-22 02:20:59.198913"], ["updated_at", "2016-01-22 02:20:59.198913"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mTrack Load (0.3ms)[0m  SELECT "tracks".* FROM "tracks"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "Gangsta Party"], ["bpm", 88], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bgangstaparty2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bgangstaparty.mp3"], ["price", 100.0], ["time", 243], ["producer_id", 13], ["created_at", "2016-01-22 02:20:59.203617"], ["updated_at", "2016-01-22 02:20:59.203617"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "My First Million"], ["bpm", 80], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bmyfirstmillion2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bmyfirstmillion.mp3"], ["price", 500.0], ["time", 351], ["producer_id", 13], ["created_at", "2016-01-22 02:20:59.207204"], ["updated_at", "2016-01-22 02:20:59.207204"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "Paper Planes"], ["bpm", 120], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bpaperplanes2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bpaperplanes.mp3"], ["price", 600.0], ["time", 261], ["producer_id", 13], ["created_at", "2016-01-22 02:20:59.210828"], ["updated_at", "2016-01-22 02:20:59.210828"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Still Cold"], ["bpm", 85], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bstillcold2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/kontrabandz%2Bstillcold.mp3"], ["price", 1000.0], ["time", 278], ["producer_id", 13], ["created_at", "2016-01-22 02:20:59.213982"], ["updated_at", "2016-01-22 02:20:59.213982"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "Empty Streets"], ["bpm", 75], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bemptystreets2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bemptystreets.mp3"], ["price", 20000.0], ["time", 267], ["producer_id", 14], ["created_at", "2016-01-22 02:20:59.217147"], ["updated_at", "2016-01-22 02:20:59.217147"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Fade to Black"], ["bpm", 100], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bfadetoblack2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bfadetoblack.mp3"], ["price", 5000.0], ["time", 267], ["producer_id", 14], ["created_at", "2016-01-22 02:20:59.220530"], ["updated_at", "2016-01-22 02:20:59.220530"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("title", "bpm", "thumb_img", "audio_url", "price", "time", "producer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "The Light"], ["bpm", 95], ["thumb_img", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bthelight2.jpg"], ["audio_url", "https://s3-us-west-2.amazonaws.com/beats-app/dreamlifebeats%2Bthelight.mp3"], ["price", 40.0], ["time", 277], ["producer_id", 14], ["created_at", "2016-01-22 02:20:59.224109"], ["updated_at", "2016-01-22 02:20:59.224109"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/tracks/49" for ::1 at 2016-01-21 21:21:12 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-21 21:21:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 100ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-21 21:21:15 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZDKHeJGwmOAk6pguSJ3y5olhHfNbTX3ZqQjlKo6QxkCDV/dKrPAW0v2mXV4BJpkRj118BksRlGpe5gl/NSPSg==", "user"=>{"email"=>"chadchristensen2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "chadchristensen2@gmail.com"]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 1.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZDKHeJGwmOAk6pguSJ3y5olhHfNbTX3ZqQjlKo6QxkCDV/dKrPAW0v2mXV4BJpkRj118BksRlGpe5gl/NSPSg==", "user"=>{"email"=>"chadchristensen2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (6.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 150ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-21 21:21:29 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2zJFI75tgDLi6fbaXklyBYA+K6y1w1HR7fmKV94PxmwQr9DjdpiCCimMxc+fb5+qXCbaK2GCInciJjHmiOEKPw==", "user"=>{"email"=>"kontrabandz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kontrabandz@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2016-01-22 02:21:29.249041"], ["current_sign_in_at", "2016-01-22 02:21:29.249041"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2016-01-22 02:21:29.250462"], ["id", 13]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/49
+Completed 302 Found in 86ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/tracks/49" for ::1 at 2016-01-21 21:21:29 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mTrack Load (0.2ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 49]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Track with 'id'=49):
+  app/controllers/tracks_controller.rb:24:in `show'
+
+
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.0ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/chadchristensen/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-21 21:22:09 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2zJFI75tgDLi6fbaXklyBYA+K6y1w1HR7fmKV94PxmwQr9DjdpiCCimMxc+fb5+qXCbaK2GCInciJjHmiOEKPw==", "user"=>{"email"=>"kontrabandz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-21 21:22:09 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:22:09 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mTrack Load (0.6ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 14]]
+  Rendered tracks/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/57" for ::1 at 2016-01-21 21:22:16 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  [1m[35mTrack Load (1.3ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 57]]
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  Rendered tracks/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tracks" for ::1 at 2016-01-21 21:22:21 -0500
+Processing by TracksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mProducer Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 14]]
+  Rendered tracks/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tracks/60" for ::1 at 2016-01-21 21:22:23 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  [1m[35mTrack Load (0.2ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1  [["id", 60]]
+  [1m[36mProducer Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  Rendered tracks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks/62" for ::1 at 2016-01-21 21:22:32 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mTrack Load (0.5ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35mProducer Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1  [["id", 14]]
+  Rendered tracks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/producers/13/tracks" for ::1 at 2016-01-21 21:23:08 -0500
+Processing by ProducersController#index as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProducer Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('Producer') AND "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mTrack Load (0.5ms)[0m  SELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1  [["producer_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1  ORDER BY "tracks"."id" ASC LIMIT 1[0m  [["producer_id", 13]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mTrack Load (0.3ms)[0m  [1mSELECT "tracks".* FROM "tracks" WHERE "tracks"."producer_id" = $1[0m  [["producer_id", 13]]
+  Rendered producers/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tracks/new" for ::1 at 2016-01-21 21:23:10 -0500
+Processing by TracksController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  Rendered tracks/_form.html.erb (2.6ms)
+  Rendered tracks/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.5ms)
