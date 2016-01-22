@@ -6,7 +6,6 @@
       <img src=" <%= @track.thumb_img %> " alt="" class="detail-track-img">
       <audio src="<%= @track.audio_url %>" controls class="audio-controls"></audio>
       <p>BPM: <%= @track.bpm %></p>
-      <p>Length: <%= @track.formatted_time %></p>
       <p>Price: <%= number_to_currency(@track.price) %> </p>
 
       <%= link_to 'Back', :tracks, class: 'btn btn-primary' %>
