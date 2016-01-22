@@ -9,7 +9,7 @@ General Assembly WDI January 22 - Project 2
 The goal of this project was to apply our knowledge of the MVC pattern using Ruby on Rails to create a CRUD application with Authentication and Authorization. I chose to integrate my love of music and to create a site where producers can upload their tracks and users can listen the tracks.
 
 ## Wireframes / Mockups
-
+![mockup]()
 ## How to Use
 1. Sign up for an account and select a type (Rapper or Producer)
 2. Rappers
