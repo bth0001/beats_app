@@ -1,7 +1,7 @@
 # Beats App
 General Assembly WDI January 22 - Project 2
 
-- Project: https://stark-citadel-2806.herokuapp.com
+- Project: http://toptracks.herokuapp.com
 - Trello Board: https://trello.com/b/ewnKaU0M/beat-sales
 - GitHub: https://github.com/chadchristensen/beats_app
 
